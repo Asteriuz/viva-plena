@@ -1,16 +1,29 @@
 import type { Metadata } from "next";
+import { Poppins, Bebas_Neue } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const poppins = Poppins({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+  weight: ["400", "700"],
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const bebas = Bebas_Neue({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-bebas",
+  weight: "400",
+});
+
+const gotham = localFont({
+  src: [
+    { path: "./fonts/Gotham-Font/Gotham-Black.otf", weight: "700" },
+    { path: "./fonts/Gotham-Font/GothamBook.ttf", weight: "400" },
+  ],
+  display: "swap",
+  variable: "--font-gotham",
 });
 
 export const metadata: Metadata = {
@@ -24,9 +37,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${poppins.variable} ${gotham.variable} ${bebas.variable} antialiased vsc-initialized flex min-h-screen min-w-full flex-col justify-between bg-white font-body text-semiblack`}
       >
         {children}
       </body>

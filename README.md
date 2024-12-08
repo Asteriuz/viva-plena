@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="./src/assets/logo/Logo.svg" width="240" alt="Viva Plena Logo" />
+  <img src="./src/assets/logo/Logotipo.png" width="300" alt="Viva Plena Logo" />
 </p>
 
-# Ferpan
+# Viva Plena
 
 Este é um projeto [Next.js](https://nextjs.org/) para a Viva Plena. Ele é inicializado com [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) e usa Tailwind CSS para estilização.
 
